@@ -1,0 +1,390 @@
+@charset "utf-8";
+
+html {
+    overflow-y: scroll; /* el footer me bailaba entre secciones,  y con esto lo arreglé */
+}
+
+body{
+    margin:0;
+    background-color:bisque;
+    overflow: hidden; /* para no hacer scroll */
+}
+
+header {
+    background-color: burlywood;
+    display: flex;
+     margin:0;
+}
+
+#laHora{
+    margin-left:1000px;
+    margin-top:120px;
+    color: brown;
+    font-size: 20px;
+     font-weight: bold;
+
+}
+
+nav{
+    display: flex;
+    background-color: brown;
+    height: 60px;
+    
+     margin:0;
+}
+
+nav>input{
+   
+    background-color: brown;
+    color:bisque;
+    font-size: 20px;
+    margin: 40px;
+    border: 2px solid burlywood;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    margin-top:10px;
+    
+}
+
+main {
+    background-color:bisque;
+    height: 650px;
+     margin:0;
+}
+
+#imagenTexto {
+    display: flex;
+       
+    /*border: 2px solid green;*/
+}
+
+.cartelSegundo{
+    border: 3px solid brown;
+    box-shadow: 5px 5px 15px brown;
+    margin-top: 20px;
+    margin-left: 60px;
+    border-radius: 10px;
+}
+
+#LoremIpsum {
+    margin-left: 150px;
+    margin-top: 50px;
+    width: 800px;
+    font-size: 25px;
+    color: brown;
+    /*border: 3px solid blue;*/ /*El mejor invento para saber como la estoy liando, el borde*/
+    margin-bottom: 200px;
+     text-align: justify;
+    
+}
+
+#cartelTercero {
+    
+    margin-right: 80px;
+    /*border: 2px solid yellow;*/
+    align-items: left;
+    text-align: right;
+    justify-content: center;
+}
+
+footer {
+    background-color: brown;
+    height: 90px;
+     margin:0;
+}
+
+#footerImagentexto {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+footer>div>div>p{ /*vamos a poner lo de los hijos que los uso poco */
+    color: beige;
+    font-size: 30px;
+    /*border: 2px solid green;*/
+    margin-bottom: 10px;
+   
+}
+
+#footerImagen {
+    margin-bottom: 10px; /* No me cuadraba, con esto arreglado*/
+}
+
+
+
+/*Comenzamos sections */
+
+
+
+
+/*SECCION COMIC*/
+
+
+#imagenSeccion {
+    display: flex;
+    gap: 120px; /*debí haber creado tres div entre imagenes para tener mismo borde por izquierda o derecha, pero a ojo así está bien*/
+    /*border: 2px solid green;*/
+}
+
+.cartelSeccionComic{
+    border: 3px solid brown;
+    box-shadow: 5px 5px 15px brown;
+    margin-top: 20px;
+    margin-left: 60px;
+    border-radius: 10px;
+}
+
+.cartelSeccionComicDos{
+    border: 3px solid brown;
+    box-shadow: 5px 5px 15px brown;
+    margin-top: 100px;
+    margin-left: 20px;
+    border-radius: 10px;
+    width: 450px;
+
+}
+
+/*SECCION PAGINA PLANO*/
+
+
+
+.cartelSeccionPlano{
+    border: 3px solid brown;
+    box-shadow: 5px 5px 15px brown;
+    margin-top: 40px;
+    margin-left: 60px;
+    border-radius: 10px;
+    
+}
+.cartelSeccionPlanoDos{ 
+    border: 3px solid brown;
+    box-shadow: 5px 5px 15px brown;
+    margin-top: 20px;
+    margin-left: 60px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+
+#imagenSeccionDos{
+    display: flex;
+    /* border:2px solid yellow; */
+}
+
+#textoUno {
+      margin-left: 60px;
+    margin-top: 0px;
+    width: 500px;
+    font-size: 25px;
+    color: brown;
+    margin-bottom: 200px;
+     text-align: justify;
+}
+
+#imagenTextoSeccionPlano {
+    border: 2 px solid pink;
+}
+
+#textoDos {
+     margin-left: 60px;
+    margin-top: 0px;
+    width: 500px;
+    font-size: 25px;
+    color: brown;
+    margin-bottom: 200px;
+     text-align: justify;
+    /* border: 2px solid blue; */
+
+}
+
+#cartelSeccionPlanoUltimo {
+     border: 3px solid brown;
+    box-shadow: 5px 5px 15px brown;
+    border-radius: 10px;
+
+}
+
+
+
+/*SECCION RESERVA DE BONO*/
+
+.cartelSeccionComicCuatro{
+    border: 3px solid brown !important; /* Lo del important */
+    box-shadow: 5px 5px 15px brown;
+    margin-top: 120px;
+    margin-left: 60px;
+    border-radius: 10px;
+    width: 450px;
+    height: 250px;
+    border: 3px solid yellow;
+
+}
+
+#textoMover {
+    margin-left: 150px;
+    color:brown;
+   line-height: 2;   
+}
+    
+
+
+#imagencitaMover{
+    margin-left: 220px;
+    
+}
+
+#spanUno {
+    margin-left: 20px;
+}
+
+#spanDos{
+    margin-left: 30px;
+}
+
+
+
+
+/*FORMULARIO */
+
+form {
+    border-radius: 15px;
+}
+
+
+
+.etiqueta label {
+          width: 60px;        
+    text-align: right;        
+    font-weight: bold;
+    color: brown;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.campo input {
+    width: 200px;             
+    padding: 2px;
+    font-size: 16px;
+    border: 2px solid brown;
+    background-color: beige;
+    border-radius: 15px;
+    text-align: left;
+    align-items: left;
+}
+
+.principal {
+display: flex;
+ align-items: center;
+margin-bottom: 25px; 
+gap: 20px;
+width: 350px;
+   
+}
+
+
+
+
+#legend {
+    color: brown;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;      
+    width: 60%;
+    border-radius: 10px;
+    border: 3px solid brown;
+    background-color: burlywood;
+    margin-right: 300px;
+    
+}
+
+#imagenDelFormulario {
+    width: 420px;
+
+}
+
+#campoobligatorio {
+    align-content: center;
+     justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:brown;
+    margin-right: 150px;
+}
+
+
+
+#cartelSeccionComicDosDos{
+    
+margin-top: 40px;
+margin-left: 40px;
+border-radius: 10px;
+width: 420px;
+
+}
+
+#fieldset {
+border: 2px solid brown;
+width: 400px;
+background-color: burlywood;
+border-radius: 10px;
+}
+
+#boletin {
+   color:brown;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   font-weight: bold;
+}
+
+#botones {
+    display: flex;               
+    justify-content: center;     
+    gap: 20px;                   
+    margin-top: 20px;            
+}
+
+#botones input[type="submit"],
+#botones input[type="reset"] {
+    background-color: brown;     
+    color: burlywood;                   
+    border: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* Errores */
+#errorNombre,
+#errorApellido,
+#errorEmail,
+#errorEdad {
+    display: block;
+    height: 20px;        
+    color: red;
+    background-color: burlywood;
+    margin-top: 5px;
+}
+
+
+
+/* Nota mental, no poner nombres tan repetitivos que la lio */
+.cartelSeccionComicBonos{
+    border: 3px solid brown;
+    box-shadow: 5px 5px 15px brown;
+    margin-top: 70px;
+    margin-left: 60px;
+    border-radius: 10px;
+   width: 500px;
+}
+
+
+
+
+

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Seguimos con los metas-->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Práctica final CoreNetwork">
+    <meta name="author" content="Pablo García Márquez">
+    <meta name="keyword" content="practicas, final, examen"> 
+    <title>FESTIVAL MANGA CORE 2026</title>
+    <link rel="shotcut icon" href="./Asset/img/favicon.png">
+    <link rel="stylesheet" href="Asset/StyleExamen.css"> <!--a Otro CSS-->
+</head>
+<body>
+    <!--header-->
+    <header>
+        <img src="./Asset/img/logo_cabecera.jpg" alt="logo" title="El logo del festival">
+
+        <div id="laHora">
+            <h1>la hora</h1>
+        </div>
+    </header>
+
+    <nav>
+        <input type="button" value="Festival" id="bSeccionUna"onclick="abrePaginaUno()" onmouseover="hoverBoton(this)" onmouseout="hoverBotonDos(this)">
+        <input type="button" value="Comic" id="bSeccionDos" onclick="abrePaginaDos()" onmouseover="hoverBoton(this)" onmouseout="hoverBotonDos(this)">
+        <input type="button" value="Plano" id="bSeccionTres" onclick="abrePaginaTres()" onmouseover="hoverBoton(this)" onmouseout="hoverBotonDos(this)">
+        <input type="button" value="Reserva de Bono" id="bSeccionCuatro"onclick="abrePaginaCuatro()" onmouseover="hoverBoton(this)" onmouseout="hoverBotonDos(this)">
+    </nav>
+
+    <main>
+        <!--Main-->
+        
+     <section id="seccionUna">
+        <div id="imagenTexto">
+
+            <div><img class="cartelSegundo" src="./Asset/img/festival_manga.jpg" alt="cartel del festival" title="Cartel del festival Manga"></div> 
+
+            <div id="LoremIpsum"><h3>El mayor festival de entretenimiento de Andalucia</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit iusto facere recusandae nemo molestiae quam minus magni aliquam perspiciatis iste, impedit accusamus! Quam, quasi provident officia modi perspiciatis aspernatur?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit iusto facere recusandae nemo molestiae quam minus magni aliquam perspiciatis iste, impedit accusamus! Quam, quasi provident officia modi perspiciatis aspernatur?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit iusto facere recusandae nemo molestiae quam minus magni aliquam perspiciatis iste, impedit accusamus! Quam, quasi provident officia modi perspiciatis aspernatur Viva er manga y que se mueran los funkos!?
+            </p><div id="cartelTercero"> <img src="./Asset/img/logo_cabecera.jpg" alt="logo festi" title="Logo del festival"> </div></div>
+
+        </div>  
+        
+    </section>  
+
+        <!--SECCIÓN COMIC-->
+        
+    <section id="seccionDos">
+            
+        <div id="imagenSeccion">
+
+            <div><img class="cartelSeccionComic" src="./Asset/img/comic1.jpg" title="manga" alt="Un cartel"></div> 
+            <div><img class="cartelSeccionComicDos" src="./Asset/img/samurai_transparente.png" title=" cartel del festi" alt="otro cartel"></div>
+            <div><img class="cartelSeccionComic" src="./Asset/img/comic2.jpg" title="Manga shonen"></div>
+           
+        </div>
+        
+    </section>
+
+
+    <!--SECCIÓN PLANO-->
+        <section id="seccionTres">
+     <div id="imagenSeccionDos">
+    <!-- Primera imagen con texto debajo -->
+        <div id="imagenTextoSeccionPlano">
+        <img class="cartelSeccionPlano" src="./Asset/img/comic6.jpg" title="imagen tipo leyendo">
+        <div id="textoUno">
+            <h3>El mayor festival de entretenimiento de Andalucía</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ipsa et eligendi voluptatum sunt debitis? Harum nesciunt ipsum earum enim quisquam ab quae repellat corrupti incidunt eos nobis, ex autem.</p>
+        </div>
+    </div>
+    <!--Segunda imagen-->
+     <div><img class="cartelSeccionPlanoDos" src="./Asset/img/plano.jpg" title="Plano del evento"></div>
+     <!--Tercera imagen con texto arriba-->
+     <div id="textoDos">
+        <h3>El mayor festival de entretenimiento de Andalucía</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ipsa et eligendi voluptatum sunt debitis? Harum nesciunt ipsum earum enim quisquam ab quae repellat corrupti incidunt eos nobis, ex autem.</p><div><img id="cartelSeccionPlanoUltimo" src="./Asset/img/comic5.jpg" title="Otaku sonriendo"></div>
+     </div>
+    
+
+        </div>
+        </section>
+
+
+
+
+    <!--SECCION RESERVA DE BONO-->
+        <section id="seccionCuatro">
+        <div id="imagenSeccion">
+
+            <div><img class="cartelSeccionComicBonos" src="./Asset/img/bono.jpg" alt="bonos" title="Info sobre bonos"></div> 
+
+            <!-- formulario-->
+             <div>
+            <div > 
+
+
+<form action="#" method="get" onsubmit="return validaFormulario()" id="cartelSeccionComicDosDos">
+         <fieldset id="fieldset">
+        <legend id="legend">RESERVA DE BONO</legend>
+        
+
+        <div class="principal">
+            <div class="etiqueta"><label for="nombre">Nombre:</label></div>
+            <div class="campo"><input type="text" id="nombre" name="nombre"></div><span id="errorNombre">*</span>
+        </div>
+
+        <div class="principal">
+            <div class="etiqueta"><label for="apellido">Apellido:</label></div>
+            <div class="campo"><input type="text" id="apellido" name="apellido"></div><span id="errorApellido">*</span>
+        </div>
+
+        <div class="principal">
+            <div class="etiqueta"><label for="email">E-mail:</label></div>
+            <div class="campo"><input type="email" id="email" placeholder="email@email.es"></div><span id="errorEmail">*</span>
+        </div>
+
+        <div class="principal">
+            <div class="etiqueta"><label for="edad">Edad:</label></div>
+            <div class="campo"><input type="number" id="edad" placeholder=" Mayor de 18 años"></div><span id="errorEdad" class="error">* </span>
+        </div>
+
+        <div id="botones">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </div>
+
+        <div id="boletin">
+            <input type="checkbox" name="boletin" > Deseo reservar bono
+        </div>
+
+        <img id="imagenDelFormulario" src="Asset/img/logo_cabecera.jpg">
+    
+
+       </fieldset>
+</form>
+</div>
+
+        <p id="campoobligatorio"> * Campo obligatorio</p>
+
+
+
+            </div>
+
+        <div>  <!--Iframe-->
+            <div><iframe class="cartelSeccionComicCuatro"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.348146486321!2d-6.0139566!3d37.3888364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c6e3971444b%3A0x7cf65689b89865bc!2sCore%20Networks%20Sevilla!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe></div> <p id="textoMover"> <img src="./Asset/img/direccion.png"> C/ Rafael Belmonte García, 4, 41010 Sevilla <br> <span id=spanUno><img src="./Asset/img/correo.png" > Email: https://corenetworkssevilla.es/</span> <br> <span id=spanDos><img src="./Asset/img/telefono.png" > Teléfono de contacto: 677 89 86 70 </span><br> <div id="imagencitaMover"><img src="./Asset/img/facebook.png" title="facebook"> <img src="./Asset/img/instagram.png" title="Instagram"> <img src="./Asset/img/x.png" title="twitter"> <img src="./Asset/img/linkedin.png" title="Linkedin"> </div></p>
+            </div>
+        </div>
+      
+        </section>
+
+    </main>
+
+    <!-- Footer-->
+
+    <footer>
+        <div id="footerImagentexto">
+            <img src="./Asset/img/logo_pie.png" alt="logo" title="logo del evento" id="footerImagen">
+            <div> <p>Core Networks. SEVILLA 2026</p></div>
+        </div>
+    </footer>
+    
+    <!--Funcionalidad Script Javascript-->
+
+    <script src="./Asset/funcionalidadUno.js"></script>
+    <script src="./Asset/funcionalidadDos.js"></script>
+</body>
+</html>
