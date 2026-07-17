@@ -1,5 +1,7 @@
 # Festival Manga Core 2026
 
+[![CI](https://github.com/Sarajesko/Manga-festival-Web/actions/workflows/ci.yml/badge.svg)](https://github.com/Sarajesko/Manga-festival-Web/actions/workflows/ci.yml)
+
 Mini sitio web del **Festival Manga Core 2026** (Sevilla): HTML, CSS y JavaScript vanilla. Portada con cartel, página principal con secciones internas y formulario de reserva de bono con validación en cliente.
 
 **Repositorio:** [github.com/Sarajesko/Manga-festival-Web](https://github.com/Sarajesko/Manga-festival-Web)  
@@ -51,6 +53,7 @@ No necesita servidor ni build: abre los HTML en el navegador.
 | Google Maps embebido | Listo |
 | Assets (CSS, JS, imágenes, favicon) | Listo |
 | Sitio estático (sin backend) | Listo |
+| CI GitHub Actions (checks en push/PR) | Listo |
 
 ---
 

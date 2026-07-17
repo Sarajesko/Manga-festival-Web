@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static:
+    name: Static site checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Required files exist
+        run: |
+          test -f index.html
+          test -f examen.html
+          test -f Asset/style.css
+          test -f Asset/StyleExamen.css
+          test -f Asset/funcionalidadUno.js
+          test -f Asset/funcionalidadDos.js
+          test -f Asset/img/cartel_manga.jpg
+          test -f Asset/img/favicon.png
+
+      - name: HTML references core assets
+        run: |
+          grep -q 'funcionalidadUno.js' index.html
+          grep -q 'funcionalidadDos.js' examen.html
+          grep -q 'validaFormulario' examen.html
+          grep -q 'seccionUna' examen.html
