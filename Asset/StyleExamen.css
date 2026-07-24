@@ -7,56 +7,74 @@ html {
 body{
     margin:0;
     background-color:bisque;
-    overflow: hidden; /* para no hacer scroll */
+    overflow-x: auto; /* antes hidden y se cortaba a la derecha en pantallas < ~1400px */
+    overflow-y: auto;
+    max-width: 100%;
 }
 
 header {
     background-color: burlywood;
     display: flex;
+    flex-wrap: wrap; /* si no cabe la hora, baja de línea en vez de empujar fuera */
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
      margin:0;
+     padding-right: 20px;
 }
 
 #laHora{
-    margin-left:1000px;
-    margin-top:120px;
+    /* margin-left:1000px;  <- esto rompía el layout en monitores normales */
+    margin-left: auto;
+    margin-right: 40px;
+    margin-top:40px;
+    margin-bottom: 20px;
     color: brown;
     font-size: 20px;
      font-weight: bold;
-
+     white-space: nowrap;
 }
 
 nav{
     display: flex;
+    flex-wrap: wrap; /* botones en varias filas si no caben */
     background-color: brown;
-    height: 60px;
-    
+    min-height: 60px;
+    height: auto;
      margin:0;
+     justify-content: center;
 }
 
 nav>input{
    
     background-color: brown;
     color:bisque;
-    font-size: 20px;
-    margin: 40px;
+    font-size: 18px;
+    margin: 10px 16px;
     border: 2px solid burlywood;
-    width: 250px;
+    width: 220px;
+    max-width: 90vw;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 40px;
-    margin-top:10px;
     
 }
 
 main {
     background-color:bisque;
-    height: 650px;
+    min-height: 650px;
+    height: auto; /* el height fijo + overflow hidden cortaba contenido */
      margin:0;
+     padding-bottom: 40px;
+     overflow-x: auto;
 }
 
 #imagenTexto {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
        
     /*border: 2px solid green;*/
 }
@@ -67,23 +85,28 @@ main {
     margin-top: 20px;
     margin-left: 60px;
     border-radius: 10px;
+    max-width: min(420px, 90vw);
+    height: auto;
 }
 
 #LoremIpsum {
-    margin-left: 150px;
+    margin-left: 40px;
+    margin-right: 40px;
     margin-top: 50px;
-    width: 800px;
-    font-size: 25px;
+    width: auto;
+    max-width: 700px;
+    flex: 1 1 320px;
+    font-size: 22px;
     color: brown;
     /*border: 3px solid blue;*/ /*El mejor invento para saber como la estoy liando, el borde*/
-    margin-bottom: 200px;
+    margin-bottom: 40px;
      text-align: justify;
     
 }
 
 #cartelTercero {
     
-    margin-right: 80px;
+    margin-right: 40px;
     /*border: 2px solid yellow;*/
     align-items: left;
     text-align: right;
@@ -97,7 +120,7 @@ footer {
 }
 
 #footerImagentexto {
-    display: flex;
+   display: flex;
     justify-content: center;
     gap: 10px;
 
@@ -127,7 +150,10 @@ footer>div>div>p{ /*vamos a poner lo de los hijos que los uso poco */
 
 #imagenSeccion {
     display: flex;
-    gap: 120px; /*debí haber creado tres div entre imagenes para tener mismo borde por izquierda o derecha, pero a ojo así está bien*/
+    flex-wrap: wrap;
+    gap: 40px; /*debí haber creado tres div entre imagenes para tener mismo borde por izquierda o derecha, pero a ojo así está bien*/
+    justify-content: center;
+    padding: 0 20px 20px;
     /*border: 2px solid green;*/
 }
 
@@ -135,17 +161,20 @@ footer>div>div>p{ /*vamos a poner lo de los hijos que los uso poco */
     border: 3px solid brown;
     box-shadow: 5px 5px 15px brown;
     margin-top: 20px;
-    margin-left: 60px;
+    margin-left: 20px;
     border-radius: 10px;
+    max-width: min(420px, 90vw);
+    height: auto;
 }
 
 .cartelSeccionComicDos{
     border: 3px solid brown;
     box-shadow: 5px 5px 15px brown;
-    margin-top: 100px;
+    margin-top: 40px;
     margin-left: 20px;
     border-radius: 10px;
     width: 450px;
+    max-width: 90vw;
 
 }
 
@@ -157,32 +186,41 @@ footer>div>div>p{ /*vamos a poner lo de los hijos que los uso poco */
     border: 3px solid brown;
     box-shadow: 5px 5px 15px brown;
     margin-top: 40px;
-    margin-left: 60px;
+    margin-left: 20px;
     border-radius: 10px;
+    max-width: min(500px, 90vw);
+    height: auto;
     
 }
 .cartelSeccionPlanoDos{ 
     border: 3px solid brown;
     box-shadow: 5px 5px 15px brown;
     margin-top: 20px;
-    margin-left: 60px;
+    margin-left: 20px;
     border-radius: 10px;
     margin-top: 50px;
+    max-width: min(520px, 90vw);
+    height: auto;
 }
 
 
 #imagenSeccionDos{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px 20px;
     /* border:2px solid yellow; */
 }
 
 #textoUno {
-      margin-left: 60px;
+      margin-left: 20px;
     margin-top: 0px;
-    width: 500px;
-    font-size: 25px;
+    width: auto;
+    max-width: 500px;
+    font-size: 22px;
     color: brown;
-    margin-bottom: 200px;
+    margin-bottom: 40px;
      text-align: justify;
 }
 
@@ -191,12 +229,13 @@ footer>div>div>p{ /*vamos a poner lo de los hijos que los uso poco */
 }
 
 #textoDos {
-     margin-left: 60px;
+     margin-left: 20px;
     margin-top: 0px;
-    width: 500px;
-    font-size: 25px;
+    width: auto;
+    max-width: 500px;
+    font-size: 22px;
     color: brown;
-    margin-bottom: 200px;
+    margin-bottom: 40px;
      text-align: justify;
     /* border: 2px solid blue; */
 
@@ -206,6 +245,8 @@ footer>div>div>p{ /*vamos a poner lo de los hijos que los uso poco */
      border: 3px solid brown;
     box-shadow: 5px 5px 15px brown;
     border-radius: 10px;
+    max-width: min(420px, 90vw);
+    height: auto;
 
 }
 
@@ -220,13 +261,14 @@ footer>div>div>p{ /*vamos a poner lo de los hijos que los uso poco */
     margin-left: 60px;
     border-radius: 10px;
     width: 450px;
+    max-width: 90vw;
     height: 250px;
     border: 3px solid yellow;
 
 }
 
 #textoMover {
-    margin-left: 150px;
+    margin-left: 40px;
     color:brown;
    line-height: 2;   
 }
@@ -234,7 +276,7 @@ footer>div>div>p{ /*vamos a poner lo de los hijos que los uso poco */
 
 
 #imagencitaMover{
-    margin-left: 220px;
+    margin-left: 40px;
     
 }
 
@@ -267,7 +309,8 @@ form {
 }
 
 .campo input {
-    width: 200px;             
+    width: 200px;
+    max-width: 70vw;             
     padding: 2px;
     font-size: 16px;
     border: 2px solid brown;
@@ -283,6 +326,7 @@ display: flex;
 margin-bottom: 25px; 
 gap: 20px;
 width: 350px;
+max-width: 95vw;
    
 }
 
@@ -298,12 +342,13 @@ width: 350px;
     border-radius: 10px;
     border: 3px solid brown;
     background-color: burlywood;
-    margin-right: 300px;
+    margin-right: 40px;
     
 }
 
 #imagenDelFormulario {
     width: 420px;
+    max-width: 90vw;
 
 }
 
@@ -313,7 +358,7 @@ width: 350px;
     align-items: center;
     text-align: center;
     color:brown;
-    margin-right: 150px;
+    margin-right: 40px;
 }
 
 
@@ -321,15 +366,17 @@ width: 350px;
 #cartelSeccionComicDosDos{
     
 margin-top: 40px;
-margin-left: 40px;
+margin-left: 20px;
 border-radius: 10px;
 width: 420px;
+max-width: 95vw;
 
 }
 
 #fieldset {
 border: 2px solid brown;
 width: 400px;
+max-width: 95vw;
 background-color: burlywood;
 border-radius: 10px;
 }
@@ -378,12 +425,13 @@ border-radius: 10px;
 .cartelSeccionComicBonos{
     border: 3px solid brown;
     box-shadow: 5px 5px 15px brown;
-    margin-top: 70px;
-    margin-left: 60px;
+    margin-top: 40px;
+    margin-left: 20px;
     border-radius: 10px;
    width: 500px;
+   max-width: 90vw;
+   height: auto;
 }
-
 
 
 
